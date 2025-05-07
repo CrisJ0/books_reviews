@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Books_reviews"
         tools:targetApi="31">
+
+        <!-- Declaración de la actividad principal -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -19,10 +21,16 @@
             android:theme="@style/Theme.Books_reviews">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Declaración de la actividad RegisterActivity -->
+        <activity android:name=".RegisterActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
