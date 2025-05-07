@@ -12,6 +12,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Imagen de la carátula del libro -->
+        <ImageView
+            android:id="@+id/coverImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Imagen de la carátula del libro" />
+
+        <!-- Título del libro -->
         <TextView
             android:id="@+id/tituloTextView"
             android:layout_width="wrap_content"
@@ -21,21 +30,23 @@
             android:textSize="18sp"
             android:textColor="#000000" />
 
+        <!-- Autor del libro -->
         <TextView
             android:id="@+id/autorTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Autor"
             android:textSize="16sp"
-            android:textColor="#333333" /> <!-- Asegúrate de que el color del texto sea visible -->
+            android:textColor="#333333" />
 
+        <!-- Descripción del libro -->
         <TextView
             android:id="@+id/descripcionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descripción breve"
             android:textSize="14sp"
-            android:textColor="#555555" /> <!-- Asegúrate de que el color del texto sea visible -->
+            android:textColor="#555555" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
