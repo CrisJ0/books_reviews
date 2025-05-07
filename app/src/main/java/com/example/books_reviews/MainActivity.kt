@@ -18,6 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.books_reviews.model.LibrosActivity
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -96,7 +97,7 @@ class MainActivity : ComponentActivity() {
 
                 Button(
                     onClick = {
-                        context.startActivity(Intent(context, CalculoActivity::class.java))
+                        context.startActivity(Intent(context, LibrosActivity::class.java))
                     },
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Black,
@@ -118,5 +119,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    class CalculoActivity
-}
