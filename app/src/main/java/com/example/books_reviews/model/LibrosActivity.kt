@@ -19,7 +19,7 @@ class LibrosActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private val adapter = LibroAdapter()
 
-    private val categorias = listOf("Drama", "Cooking", "Science", "History")
+    private val categorias = listOf("drama")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

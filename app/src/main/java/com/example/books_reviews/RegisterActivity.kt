@@ -1,5 +1,6 @@
 package com.example.books_reviews
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -95,7 +96,10 @@ class RegisterActivity : ComponentActivity() {
 
             Button(
                 onClick = {
-                    // Acción al registrar usuario
+                    // Acción al registrar usuario (aquí puedes agregar tu lógica de registro)
+                    val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                    startActivity(intent)
+                    finish() // Esto cerrará RegisterActivity y no permitirá regresar a ella al presionar "atrás"
                 },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.Black,
@@ -108,3 +112,4 @@ class RegisterActivity : ComponentActivity() {
         }
     }
 }
+
