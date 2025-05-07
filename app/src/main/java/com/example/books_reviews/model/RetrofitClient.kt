@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "http://tu-backend.com/"  // <-- Reemplaza con la URL de tu backend real
+    private const val BASE_URL = "https://api-review-x2nq.onrender.com/"  // <-- Reemplaza con la URL de tu backend real
 
     val api: LibroApi by lazy {
         Retrofit.Builder()
