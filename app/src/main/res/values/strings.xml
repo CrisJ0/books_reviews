@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">books_reviews</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="correo_electr_nico">Correo electrónico</string>
+    <string name="contrase_a">Contraseña</string>
 </resources>
