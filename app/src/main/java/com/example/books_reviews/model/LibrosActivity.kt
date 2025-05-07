@@ -48,7 +48,7 @@ class LibrosActivity : AppCompatActivity() {
     private fun cargarLibros(categoria: String) {
         lifecycleScope.launch {
             try {
-                val libros = RetrofitClient.api.getLibrosPorCategoria(categoria)
+                val libros = RetrofitClient.api.getLibrosPorCategoria("drama")
                 adapter.submitList(libros)
             } catch (e: Exception) {
                 Toast.makeText(this@LibrosActivity, "Error: ${e.message}", Toast.LENGTH_SHORT).show()

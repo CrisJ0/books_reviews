@@ -1,7 +1,7 @@
 package com.example.books_reviews.model
 
 data class Libro(
-    val titulo: String,
-    val autor: String,
-    val descripcion: String
+    val title: String,
+    val author: String,
+    val description: String
 )

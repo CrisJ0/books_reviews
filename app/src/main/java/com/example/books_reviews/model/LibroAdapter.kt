@@ -31,9 +31,9 @@ class LibroAdapter : RecyclerView.Adapter<LibroAdapter.LibroViewHolder>() {
 
     override fun onBindViewHolder(holder: LibroViewHolder, position: Int) {
         val libro = libros[position]
-        holder.titulo.text = libro.titulo
-        holder.autor.text = libro.autor
-        holder.descripcion.text = libro.descripcion
+        holder.titulo.text = libro.title
+        holder.autor.text = libro.author
+        holder.descripcion.text = libro.description
     }
 
     override fun getItemCount()=libros.size
