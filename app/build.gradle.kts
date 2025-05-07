@@ -73,6 +73,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.filament.android)
+    implementation(libs.material)
 
 // Testing
     testImplementation(libs.junit)

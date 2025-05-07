@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Tema personalizado con texto en negro -->
+    <style name="Theme.Books_reviews" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Establecer color del texto primario (esto afecta al título) -->
+        <item name="android:textColorPrimary">@android:color/black</item>
 
-    <style name="Theme.Books_reviews" parent="android:Theme.Material.Light.NoActionBar" />
+        <!-- Establecer fondo blanco -->
+        <item name="android:background">@android:color/white</item>
+    </style>
 </resources>
+
