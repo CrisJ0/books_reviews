@@ -19,7 +19,7 @@ class LibrosActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private val adapter = LibroAdapter()
 
-    private val categorias = listOf("drama")
+    private val categorias = listOf("drama", "horror", "comedy")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +48,7 @@ class LibrosActivity : AppCompatActivity() {
     private fun cargarLibros(categoria: String) {
         lifecycleScope.launch {
             try {
-                val libros = RetrofitClient.api.getLibrosPorCategoria("drama")
+                val libros = RetrofitClient.api.getLibrosPorCategoria(categoria)
                 adapter.submitList(libros)
             } catch (e: Exception) {
                 Toast.makeText(this@LibrosActivity, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
