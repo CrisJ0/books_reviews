@@ -3,10 +3,11 @@ package com.example.books_reviews.model
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.books_reviews.R
-
 
 class LibroAdapter : RecyclerView.Adapter<LibroAdapter.LibroViewHolder>() {
 
@@ -18,14 +19,16 @@ class LibroAdapter : RecyclerView.Adapter<LibroAdapter.LibroViewHolder>() {
         notifyDataSetChanged()
     }
 
-    class LibroViewHolder(view: android.view.View) : RecyclerView.ViewHolder(view) {
-        val titulo: TextView = view.findViewById(R.id.tituloTextView)
-        val autor: TextView = view.findViewById(R.id.autorTextView)
-        val descripcion: TextView = view.findViewById(R.id.descripcionTextView)
+    class LibroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val portada: ImageView = view.findViewById(R.id.imageViewPortada)
+        val titulo: TextView = view.findViewById(R.id.textViewTitulo)
+        val autor: TextView = view.findViewById(R.id.textViewAutor)
+        val descripcion: TextView = view.findViewById(R.id.textViewDescripcion)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibroViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_libro, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_libro, parent, false)
         return LibroViewHolder(view)
     }
 
@@ -34,7 +37,10 @@ class LibroAdapter : RecyclerView.Adapter<LibroAdapter.LibroViewHolder>() {
         holder.titulo.text = libro.title
         holder.autor.text = libro.author
         holder.descripcion.text = libro.description
+
+        // Carga simple con Coil 2.x
+        holder.portada.load(libro.coverImageUrl)
     }
 
-    override fun getItemCount()=libros.size
+    override fun getItemCount() = libros.size
 }
